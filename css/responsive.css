@@ -665,7 +665,7 @@
     }
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:360px){
     /* menu */
     .menu .wrap ul li a{
         font-size: 2.5rem;
@@ -673,9 +673,11 @@
     .menu-page .menu .wrap .container .chapter .portfolio{
         height: 10rem;
         margin-left: 1rem;
-
     }
     /* main */
+    .main .block{
+        top: 70%;
+    }
     .main .block li{
         width: 6rem;
     }
@@ -701,7 +703,7 @@
         width: 8rem;
     }
     .main-title{
-        margin-top: 110%;
+        margin-top: 100%;
     }
     .main-title h1 {
         font-size: 2.8rem;
@@ -713,7 +715,7 @@
     /* about */
     .box{
         padding: 1.5rem;
-        height: 70%;
+        height: 85vh;
     }
     .group .item{
         margin-left: 0;
@@ -749,7 +751,7 @@
     }
     .design .image-wrapper {
         top: 20%;
-        left: 2rem;
+        left: 4rem;
     }
     .inner-txt{
         border-radius: 0;
@@ -811,6 +813,9 @@
         border-bottom: 2rem solid transparent;
         border-right: 2rem solid transparent;
         border-left: 2rem solid;
+    }
+    .close{
+        font-size: 2rem;
     }
 
     /* coding */
