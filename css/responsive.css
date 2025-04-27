@@ -715,7 +715,7 @@
     /* about */
     .box{
         padding: 1.5rem;
-        height: 85vh;
+        height: 80vh;
     }
     .group .item{
         margin-left: 0;
@@ -735,7 +735,7 @@
     }
     /* design */
     .design h1.title{
-        top: 10rem;
+        top: 5rem;
     }
     .main-slider{
         width: 28rem;
