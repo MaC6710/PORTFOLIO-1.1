@@ -29,6 +29,7 @@ body {
     font-family: 'DungGeunMo';
     background-color: #000;
     color: #fff;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 ul {

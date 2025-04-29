@@ -47,6 +47,13 @@ $(function () {
 //     }
 //   });
 
+// 반응형 세로 사이즈 조정
+function setVh() {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+  }
+  window.addEventListener('resize', setVh);
+  setVh();
+
 // menu
 $(document).ready(function () {
     const $hamburger = $('.hamburger');
