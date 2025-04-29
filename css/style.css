@@ -62,7 +62,9 @@ body {
     height: 100vh;
     perspective: 1200px;
 }
-
+/* .swiper, .swiper-wrapper{
+    overflow: hidden !important;
+} */
 .swiper-container {
     width: 100%;
     height: auto;
@@ -73,7 +75,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transition: transform 0.6s;
@@ -158,7 +159,7 @@ body {
 /* menu */
 .menu-page {
     display: none;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -188,7 +189,7 @@ body {
 }
 
 .container {
-    width: 45%;
+    width: 50vw;
     height: 100%;
     margin-top: 5rem;
     display: flex;
@@ -275,8 +276,15 @@ body {
 .main {
     background: url(../image/main-bg.png) no-repeat 50% /contain;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.main-wrapper{
+    width: 100%;
+    height: 100%;
 
+}
 @keyframes rotation{
     0%{
         transform: rotate(0deg);
@@ -319,21 +327,21 @@ body {
 }
 
 .main-title {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    white-space: pre;
+    white-space: pre-line;
+    white-space: normal;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
 }
-
-.main{
-    justify-content: start;
-}
-.main-title{
-    margin-top: 30rem;
-}
-.main .block{
+/* .main .block{
     position: absolute;
     top: 55%;
-}
+} */
 
 .blink a {
     font-size: 2.8rem;
@@ -355,19 +363,24 @@ body {
 }
 
 /* about */
+.about-wrapper{
+    width: 100vw;
+    height: 100vh;
+}
 .box {
-    width: 70%;
-    height: 80%;
+    width: 70vw;
+    height: 80vh;
     border: 5px solid #fff;
     border-top: 5rem solid #fff;
     margin: 0 auto;
-    padding: 10rem;
+    padding: 5rem;
     /* display: flex; */
     /* justify-content: space-around; */
     position: relative;
 }
 
 .box ul {
+    width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
@@ -385,6 +398,7 @@ b{
 .group {
     display: flex;
     font-size: 6rem;
+    width: 80%;
 }
 
 .group .item {
@@ -418,13 +432,13 @@ b{
     height:12rem;
 }
 .circle {
-    width: 35rem;
-    height: 35rem;
+    width: 15vw;
+    height: 30vh;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    top: 5rem;
-    right: 4rem;
+    top: 10%;
+    right: 5%;
 }
 
 .shake {
@@ -447,26 +461,29 @@ b{
 .design {
     position: relative;
 }
-
+/* .swiper-slide.design{
+    overflow: hidden;
+} */
 .design img {
     background-color: #d9d9d9;
 }
 
 .design .title {
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     z-index: 99;
 }
 
 .design .image-wrapper {
     position: absolute;
-    left: 0;
+    height: 90vh;
+    left: 5%;
     z-index: 99;
 }
 
 .main-slider {
-    width: 90rem;
-    height: 90rem;
+    width: 50vw;
+    height: 90vh;
     border-radius: 50%;
     border: 10px solid #fff;
     overflow: hidden;
@@ -496,7 +513,7 @@ b{
     background: url(../image/cover/webbanner/logo-main.png) no-repeat 50% / cover;
 }
 .main-slider .swiper-slide p{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .main-slider .swiper-slide img{
     object-position: top;
@@ -537,7 +554,6 @@ b{
     font-size: 2rem;
     font-family: 'Pretendard';
     text-align: center;
-    line-height: 4rem;
 }
 .inner-txt .more:hover{
     background-color: #fff;
@@ -546,22 +562,26 @@ b{
 
 .thumbnail-slider {
     width: 80%;
-    height: 40rem;
+    height: 40vh;
     border: 10px solid #fff;
     overflow: hidden;
     position: absolute;
-    top: 30%;
-    left: 25%;
+    top: 20%;
+    left: 18%;
+    transform: translateY(-50%);
     opacity: 0.5;
 }
 
 .thumbnail-slider .swiper-button-next {
     position: absolute;
     top: 50%;
-    right: 8%;
-    z-index: 99;
+    right: 10vw;
+    z-index: 101;
     color: #000;
     animation: scrolled 2s infinite ease-in-out;
+}
+.swiper-slide.design{
+    overflow: hidden;
 }
 
 @keyframes scrolled {
@@ -636,12 +656,21 @@ b{
 i {
     display: block;
 }
+.main-slider, .thumbnail-slider{
+    z-index: 1;
+    position: relative;
+}
 
 /* coding */
 .inner {
     width: 80%;
-    height: 76.3rem;
+    height: 80vh;
     margin: 0 auto;
+}
+.inner-wrapper{
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
 }
 .inner-remote{
     display: none;
@@ -674,7 +703,7 @@ i {
 .cont .imgarea {
     border: 1rem solid #fff;
     width: 90%;
-    height: 48rem;
+    height: 50vh;
     overflow: hidden;
 }
 .cont .imgarea .image{
@@ -729,13 +758,17 @@ i {
 /* contact */
 .contact {
     width: 90%;
-    height: 90%;
+    /* height: 80vh; */
     border: 5px solid #fff;
     border-top: none;
     border-bottom: none;
     margin: 0 5rem;
     padding: 0 10rem;
     position: relative;
+    z-index: 99;
+}
+.contact .title{
+    margin-bottom: 0;
 }
 .contact-box{
     display: flex;
@@ -755,10 +788,12 @@ i {
 }
 .contact .table-wrap {
     width: 100%;
+    height: 100%;
 }
 
 .contact table {
     width: 100%;
+    height: 100%;
     font-size: 5rem;
     font-weight: 400;
     text-align: start;
@@ -802,14 +837,6 @@ tr td button {
     font-size: 4rem;
     cursor: pointer;
     border: none;
-}
-
-.thanks {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 0; bottom: 0;
 }
 
 .thanks .bounce{

@@ -36,6 +36,17 @@ $(function () {
 // // 2초마다 이미지 변경
 // setInterval(changeImage, 2000);
 
+//fullpage 반응형
+// const fullpageswiper = new Swiper(".fullpage", {
+//     direction: "vertical",
+//     slidesPerView: 1,
+//     breakpoints: {
+//       480: { slidesPerView: 1, spaceBetween: 10 },
+//       768: { slidesPerView: 1, spaceBetween: 20 },
+//       1024: { slidesPerView: 1, spaceBetween: 30 }
+//     }
+//   });
+
 // menu
 $(document).ready(function () {
     const $hamburger = $('.hamburger');
@@ -128,10 +139,10 @@ $(document).ready(function () {
 
 // coding
 
-// function fixedMousewheel() {
+function fixedMousewheel() {
     // 기존 이벤트 제거 (중복 방지)
-    // $(".inner").off("mouseenter mouseleave");
-    // $(".fullpage").off("mouseenter");
+    $(".inner").off("mouseenter mouseleave");
+    $(".fullpage").off("mouseenter");
   
     // 480px 초과에서만 이벤트 바인딩
     if ($(window).width() > 480) {
@@ -151,8 +162,11 @@ $(document).ready(function () {
         fullpageswiper.mousewheel.enable();
       });
     }
-//   }
-
+}
+// 최초실행
+fixedMousewheel();
+// 리사이즈시, 재실행
+$(window).on("resize", fixedMousewheel)
 // coding
 // $(".inner").on("mouseenter", function () {
 //     // fullpage에서 효과 비활성화
