@@ -536,9 +536,10 @@
     }
 
     .return {
-        right: 3rem;
+        width: 8vw;
+        height: 5vh;
+        right: 5%;
     }
-
     /* main */
     /* .main-title {
         margin-top: 28rem;
